@@ -26,7 +26,7 @@
                                     <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="oqo-yK-3wx"/>
                                 </connections>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4yN-Z0-JCw">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="4yN-Z0-JCw">
                                 <rect key="frame" x="90" y="103" width="194" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -39,6 +39,7 @@
                     </view>
                     <connections>
                         <outlet property="mySeg" destination="f8H-Qe-9EO" id="ttC-Rw-GGu"/>
+                        <outlet property="mySlider" destination="4yN-Z0-JCw" id="DmI-O5-oXH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

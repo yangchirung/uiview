@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var timer:Timer!
     var counter=0.0
     
+    @IBOutlet weak var mySlider: UISlider!
     @IBOutlet weak var mySeg: UISegmentedControl!
     
     override func viewDidLoad() {
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
         newView.clipsToBounds = true
         self.view.addSubview(newView)
         
+       
         timer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (timer) in
             self.rotateView(targetView: self.newView)
         })
@@ -44,10 +46,10 @@ class ViewController: UIViewController {
         targetView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
 //        counter += 4;
         if(mySeg.selectedSegmentIndex == 0){
-            counter += 4;
+            counter += Double(mySlider.value);
         }
         else {
-            counter -= 4;
+            counter -= Double(mySlider.value);
         }
     }
     @IBAction func sliderAction(_ sender: UISlider) {
