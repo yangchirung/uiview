@@ -16,12 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f8H-Qe-9EO">
-                                <rect key="frame" x="122" y="104" width="131" height="32"/>
+                                <rect key="frame" x="96" y="104" width="190" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title="Third"/>
+                                    <segment title="正轉"/>
+                                    <segment title="反轉"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="oqo-yK-3wx"/>
@@ -31,10 +30,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mySeg" destination="f8H-Qe-9EO" id="ttC-Rw-GGu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-506" y="18"/>
+            <point key="canvasLocation" x="-1158" y="43"/>
         </scene>
     </scenes>
 </document>

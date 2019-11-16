@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     var timer:Timer!
     var counter=0.0
     
+    @IBOutlet weak var mySeg: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,19 +38,21 @@ class ViewController: UIViewController {
     }
     
     func rotateView(targetView:UIView){
-//        print("test")
         
         let angle = counter * M_PI / 180
         targetView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
-        counter += 4;
+//        counter += 4;
+        if(mySeg.selectedSegmentIndex == 0){
+            counter += 4;
+        }
+        else {
+            counter -= 4;
+        }
     }
 
 
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
-        
-        print(sender.selectedSegmentIndex)
-        
-        
+//        print(sender.selectedSegmentIndex)
     }
 }
 
