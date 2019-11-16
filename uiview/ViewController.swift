@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var theView:UIView!
+    var newView:UIView!
     var timer:Timer!
     var counter=0.0
     
@@ -22,14 +22,16 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        theView = UIView(frame:CGRect(x: 0, y: 0, width: 100, height: 100))
-        theView.center = self.view.center
-        theView.backgroundColor = UIColor.red
-        theView.transform = CGAffineTransform(rotationAngle: 0)
-        self.view.addSubview(theView)
+        newView = UIView(frame:CGRect(x: 0, y: 0, width: 100, height: 100))
+        newView.center = self.view.center
+        newView.backgroundColor = UIColor.red
+        newView.transform = CGAffineTransform(rotationAngle: 0)
+        newView.layer.cornerRadius = 15
+        newView.clipsToBounds = true
+        self.view.addSubview(newView)
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (timer) in
-            self.rotateView(targetView: self.theView)
+            self.rotateView(targetView: self.newView)
         })
     }
     
