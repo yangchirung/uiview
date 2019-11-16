@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         })
     }
     
+    
     func rotateView(targetView:UIView){
         
         let angle = counter * M_PI / 180
@@ -49,7 +50,9 @@ class ViewController: UIViewController {
             counter -= 4;
         }
     }
-
+    @IBAction func sliderAction(_ sender: UISlider) {
+        print(sender.value)
+    }
 
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
 //        print(sender.selectedSegmentIndex)
