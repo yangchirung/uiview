@@ -10,16 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var theView:UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        print("test")
+        
+        theView = UIView(frame:CGRect(x: 0, y: 0, width: 100, height: 100))
+        theView.center = self.view.center
+        theView.backgroundColor = UIColor.red
+        self.view.addSubview(theView)
     }
 
 
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         
         print(sender.selectedSegmentIndex)
+        
         
     }
 }
