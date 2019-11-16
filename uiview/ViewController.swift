@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     var theView:UIView!
     var timer:Timer!
+    var counter=0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +34,11 @@ class ViewController: UIViewController {
     }
     
     func rotateView(targetView:UIView){
-        print("test")
+//        print("test")
+        
+        let angle = counter * M_PI / 180
+        targetView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
+        counter += 4;
     }
 
 
